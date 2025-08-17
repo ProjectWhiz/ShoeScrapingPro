@@ -1,0 +1,54 @@
+House Hunting Assistant
+
+Goals:
+
+Scrap apartment sites to get information for potential places to move to within my budget.
+budget will be given to the program via user input
+
+What I will need to do:
+
+*Set up venv since it will be a terminal app*
+
+find sites that allow scraping or api that can make the right requests
+Sites:
+	Apartments.com (Start with this first)
+	Zillow.com
+	Redfin
+	Rent.com
+*Check sites robots.txt to see if scraping is blocked*
+
+Set up UserInput to get budget:
+
+Setup the scraper to get the info
+	
+Calculate the True cost of living in the apartment (This includes rent, utility etc)
+Costs (GA Only):
+	$1200 Rent
+	$150 Electricity
+	$60 Water/Sewer
+	$25 Trash
+	$100 Internet
+	$30 Renters Insurance
+	
+
+Make a comparison to a given budget to check if it meets the requirements
+--> take user input to get "Given Budget"
+--> Save user input somewhere so it can be reference by program
+
+If requirements are met then a notification can be sent to my phone showing the listing and its website.
+
+Notification requirements:
+	Meeting the budget criteria
+	Notifications will be to SMS using twilio
+
+Frequency the program will run:
+	Once per week
+	Only matches will be saved
+
+Errors:
+
+If no matches --> "No Matches Found"
+Network Error --> Print relavent statement
+Blocked by site --> Refer to robots.txt to validate
+
+
