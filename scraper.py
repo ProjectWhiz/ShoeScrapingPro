@@ -1,11 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
-from main import *
 
 
-Url = "https://www.apartments.com/?bb=8sgylrr29HzsmxgtB"
+Url = "https://www.apartments.com/sitemap_AllCitySearches_Price.xml.gz"
 requests.get(Url)
-print(Url)
+
 
 
    

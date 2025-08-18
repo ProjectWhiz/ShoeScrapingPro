@@ -1,4 +1,4 @@
-from scraper import *
+
 
 def Setbudget():
     budget = input("Please enter your desired budget: ")
@@ -12,14 +12,9 @@ def Setbudget():
         print("Invalid input")
     return budget, location
         
-    
-def NotifyUser():
-    print("This is where the notification logic will go")
-    pass
 
 
-    
-    
+Setbudget()
     
 
 
