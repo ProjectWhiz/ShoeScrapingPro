@@ -1,54 +1,43 @@
-House Hunting Assistant
+Foot Locker webscraper:
 
-Goals:
+Goal:
 
-Scrap apartment sites to get information for potential places to move to within my budget.
-budget will be given to the program via user input
+1. Check against user's price to find shoes within range
+2. Check for a certain shoe type at the users price
+3. Send notification via discord
 
-What I will need to do:
 
-*Set up venv since it will be a terminal app*
+Steps to goal:
 
-find sites that allow scraping or api that can make the right requests
-Sites:
-	Apartments.com (Start with this first)
-	Zillow.com
-	Redfin
-	Rent.com
-*Check sites robots.txt to see if scraping is blocked*
+1. Set up Venv
 
-Set up UserInput to get budget:
+2. Find a website to scrap
+- Currently using footlocker (https://www.footlocker.com/en/category/mens/shoes.html)
+- Check Robot.txt to make sure its valid
 
-Setup the scraper to get the info
-	
-Calculate the True cost of living in the apartment (This includes rent, utility etc)
-Costs (GA Only):
-	$1200 Rent
-	$150 Electricity
-	$60 Water/Sewer
-	$25 Trash
-	$100 Internet
-	$30 Renters Insurance
-	
+3. Setup user input to take in budget price or shoe type if applicable
+- Input needed, Price point or type of shoe
+- Shoe type may not be needed if price point is there
 
-Make a comparison to a given budget to check if it meets the requirements
---> take user input to get "Given Budget"
---> Save user input somewhere so it can be reference by program
+4. Scrape site by finding everything at the price point of everything from the shoe type
 
-If requirements are met then a notification can be sent to my phone showing the listing and its website.
+EX: Give results by showing all shoes at a certain price
+EX: Show results for all Jordan 4's
 
-Notification requirements:
-	Meeting the budget criteria
-	Notifications will be to SMS using twilio
+5. Connect the finished scraper to discord to send notifications
+- Users will see results within a server that can be joined by anyone
 
-Frequency the program will run:
-	Once per week
-	Only matches will be saved
 
-Errors:
+Future Goals:
 
-If no matches --> "No Matches Found"
-Network Error --> Print relavent statement
-Blocked by site --> Refer to robots.txt to validate
+- Setup multiple scrapers to run for different things (Female shoes, Shoes size etc.)
+- Setup up a system to allow the program to run based on a server vote
+
+EX: Users within server will vote for a shoe each week which will be seen and ran by the program to gather the results to send in the server.
+
+
+Warnings:
+
+Figure out how many request can be done at what frequency so the IP won't get blocked
 
 
