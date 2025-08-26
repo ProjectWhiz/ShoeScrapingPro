@@ -40,4 +40,28 @@ Warnings:
 
 Figure out how many request can be done at what frequency so the IP won't get blocked
 
+Creating Discord Bot:
+
+Go to the Discord Developer Portal
+
+Click New Application → give it a name (e.g., ShoeFinder).
+
+Go to Bot → “Add Bot” → confirm.
+
+Copy the Bot Token (you’ll need this in your code). ⚠️ Don’t share it!
+
+Under Privileged Gateway Intents, enable:
+
+MESSAGE CONTENT INTENT (so it can read messages/commands).
+
+2. Invite Bot to Your Server
+
+In the app settings, go to OAuth2 → URL Generator.
+
+Check bot under scopes.
+
+Under Bot Permissions, check Send Messages, Embed Links, maybe Read Message History.
+
+Copy the generated URL, paste in browser, invite bot to your server.
+
 
