@@ -1,27 +1,52 @@
+# Make a class that will allow you to create certain inputs based on user needs
 
+class ShoeInput:
+    def __init__(self):
+        self.user = None
+        self.brand = None
+        self.price = None
+        self.size = None
 
-def Setbudget():
-    budget = input("Please enter your desired budget: ")
-    location = input("Enter the location you are interested in (city, state): ")
-    confirm = input(f"You entered a budget of ${budget} and location of {location}. Is this correct? (yes/no): ")
-    if confirm.lower() == 'yes':
-        print(f"Budget is set to {budget}\nLocation is set to {location}")
-    elif confirm.lower() == 'no':
-        print("Try again later")
-    else:
-        print("Invalid input")
-    return budget, location
+    def input_type(self):
+        while True:
+            self.user = int(input("How do you want to query?\n1:brand\n2.price?\nAnswer: "))
+            if self.user == 1:
+                self.brand_check()
+                break
+                
+            elif self.user == 2:
+                print("You selected price")
+                self.price_check()
+                break
+            else:
+                print("Invalid input, please try again.\n")
+                continue    
+            
+    def brand_check(self):
+        brand_type = []
+        self.brand = input("What brand do you want to search for?\nAnswer: ")
+        brand_type.append(self.brand)
+        print(brand_type)
+        
+    def price_check(self):
+        price = []
+        self.price = float(input("What is your current budget?\nAnswer:$ "))
+        price.append(self.price)
+        print(price)
         
 
 
-Setbudget()
+
+
+def main():
+    shoe_input = ShoeInput()
+    shoe_input.input_type()
 
 
 
-    
 
-
-
+if __name__ == "__main__":
+    main()
 
 
 
