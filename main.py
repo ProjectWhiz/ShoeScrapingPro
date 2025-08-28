@@ -2,19 +2,20 @@
 
 class ShoeInput:
     def __init__(self):
-        self.user = None
+        self.user_input = {}
+        self.choice = None
         self.brand = None
         self.price = None
         self.size = None
 
     def input_type(self):
         while True:
-            self.user = int(input("How do you want to query?\n1:brand\n2.price?\nAnswer: "))
-            if self.user == 1:
+            self.choice = int(input("How do you want to query?\n1:brand\n2.price\nAnswer: "))
+            if self.choice == 1:
                 self.brand_check()
                 break
                 
-            elif self.user == 2:
+            elif self.choice == 2:
                 print("You selected price")
                 self.price_check()
                 break
@@ -23,17 +24,19 @@ class ShoeInput:
                 continue    
             
     def brand_check(self):
-        brand_type = []
-        self.brand = input("What brand do you want to search for?\nAnswer: ")
-        brand_type.append(self.brand)
-        print(brand_type)
+        self.user_input['brand'] = input("What brand do you want to search for?\nAnswer: ").strip()
+        self.user_input['size'] = float(input("What size are you looking for?\nAnswer: "))
+        self.get_search_params()
         
     def price_check(self):
-        price = []
-        self.price = float(input("What is your current budget?\nAnswer:$ "))
-        price.append(self.price)
-        print(price)
-        
+        self.user_input['price'] = float(input("What is your current budget?\nAnswer:$ "))
+        self.user_input['size'] = float(input("What size are you looking for?\nAnswer: "))
+        self.get_search_params()
+    
+    def get_search_params(self):
+        """Return the search parameters dictionary"""
+        print(self.user_input)
+        return self.user_input
 
 
 
