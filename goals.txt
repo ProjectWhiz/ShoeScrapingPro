@@ -9,13 +9,13 @@ Goal:
 
 Steps to goal:
 
-1. Set up Venv
+*1 . Set up Venv 
 
-2. Find a website to scrap
+* 2. Find a website to scrap
 - Currently using footlocker (https://www.footlocker.com/en/category/mens/shoes.html)
 - Check Robot.txt to make sure its valid
 
-3. Setup user input to take in budget price or shoe type if applicable
+* 3. Setup user input to take in budget price or shoe type if applicable
 - Input needed, Price point or type of shoe
 - Shoe type may not be needed if price point is there
 

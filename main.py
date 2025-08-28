@@ -6,7 +6,7 @@ class ShoeInput:
         self.choice = None
         self.brand = None
         self.price = None
-        self.size = None
+        "self.size = None"
 
     def input_type(self):
         while True:
@@ -25,12 +25,16 @@ class ShoeInput:
             
     def brand_check(self):
         self.user_input['brand'] = input("What brand do you want to search for?\nAnswer: ").strip()
+        """
         self.user_input['size'] = float(input("What size are you looking for?\nAnswer: "))
+        """
         self.get_search_params()
         
     def price_check(self):
         self.user_input['price'] = float(input("What is your current budget?\nAnswer:$ "))
+        """
         self.user_input['size'] = float(input("What size are you looking for?\nAnswer: "))
+        """
         self.get_search_params()
     
     def get_search_params(self):
