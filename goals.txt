@@ -1,3 +1,14 @@
+Current Status:
+
+Parser is mostly built I am running into an issue where when the program parsers the website it returns "no items found"
+The idea I have is that the size is not on the product card only the brand name and price so I believe that if you 
+removed the size it should work but it didn't so pick up from there and try to fix that problem
+
+8/27/25
+
+
+
+
 Foot Locker webscraper:
 
 Goal:
