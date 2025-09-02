@@ -1,8 +1,8 @@
 Current Status:
 
-Parser is mostly built I am running into an issue where when the program parsers the website it returns "no items found"
-The idea I have is that the size is not on the product card only the brand name and price so I believe that if you 
-removed the size it should work but it didn't so pick up from there and try to fix that problem
+I have now finished the main parsing program, Everything now runs as expected. Next Steps could be to add Logic that will also parsers
+for the links to each item that is appended to the list. This more than likely will require you to parse for 'a' tags alongside the other info
+Also the discord bot will need to be created and tied to the current program 
 
 8/27/25
 
